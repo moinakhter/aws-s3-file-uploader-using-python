@@ -17,11 +17,11 @@ A lightweight Python library to upload versioned files to Amazon S3 with progres
 
 Files are stored in the following hierarchy:
 
-assistant_versions/
+```assistant_versions/
 └── {assistant_version}/
 └── {service_name}/
 └── {service_version}/
-└── {file_name}
+└── {file_name}```
 
 
 
@@ -47,10 +47,10 @@ Make sure you have boto3 and botocore installed:
 ### 3. Configure AWS Credentials
 Edit the AwsS3 class to include your AWS credentials:
 
-`self.session = boto3.Session(
+```self.session = boto3.Session(
     aws_access_key_id="your-access-key-id",
     aws_secret_access_key="your-secret-access-key",
-)`
+) ```
 
 
 Update the S3 bucket name and region if needed:
@@ -64,22 +64,22 @@ Update the S3 bucket name and region if needed:
 #### Upload a File
 
 
-`s3 = AwsS3()
+```s3 = AwsS3()
 s3.upload_file(
     file_path="/local/path/to/file",
     assistant_version="1.0.0",
     service_name="assistant",
     service_version="1.0.0"
-)`
+)```
 
 
 #### Generate a Pre-signed Download URL
-`url = s3.generate_download_link(
+```url = s3.generate_download_link(
     assistant_version="1.0.0",
     service_name="assistant",
     service_version="1.0.0"
 )
-print(url)`
+print(url)```
 
 
 ### 📌 Services Supported
