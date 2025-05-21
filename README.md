@@ -34,7 +34,7 @@ assistant_versions/
 ### 1. Clone the Repository
 
 
-`git clone https://github.com/yourusername/aws-s3-file-uploader.git`
+`git clone https://github.com/yourusername/aws-s3-file-uploader-using-python.git`
 `cd aws-s3-file-uploader `
 
 
